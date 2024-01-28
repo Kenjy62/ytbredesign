@@ -1,6 +1,11 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+// Components
+import Nav from "@/components/Nav";
+import Topbar from "@/components/Topbar";
+import SplashScreen from "@/components/SplashScreen";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -10,8 +15,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html className="overflow-hidden bg-bgPrimary" lang="en">
+      <body className={`flex flex-row ${inter.className}`}>
+        <SplashScreen />
+        <Nav />
+        <div className="flex w-full flex-col">
+          <Topbar />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
