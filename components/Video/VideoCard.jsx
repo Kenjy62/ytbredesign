@@ -5,13 +5,15 @@ import Avatar from "../UI/Avatar";
 export default function VideoCard({ item, id }) {
   return (
     <div className="flex flex-col gap-2 text-white">
-      <Image
-        src={`https://picsum.photos/500/500?${id}`}
-        height={250}
-        width={500}
-        className="h-[180px] w-[90%] rounded-lg"
-      />
-      <span>{item.name}</span>
+      <Link href="#" className="group flex flex-col gap-2">
+        <Image
+          src={`https://picsum.photos/500/500?${id}`}
+          height={250}
+          width={500}
+          className="h-[180px] w-[90%] rounded-lg"
+        />
+        <span className="group-hover:text-red-500">{item.name}</span>
+      </Link>
       <div className="flex flex-row items-center gap-4">
         <Link
           href={"#"}
