@@ -12,6 +12,8 @@ import Subscription from "./Subscription";
 import Misc from "./Misc";
 import Header from "../UI/Header";
 
+import PerfectScrollbar from "react-perfect-scrollbar";
+
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(true);
 
@@ -23,17 +25,19 @@ export default function Nav() {
     <>
       <motion.div
         initial={{ width: 280 }}
-        animate={{ width: isOpen ? 280 : 70 }}
-        className="hidden h-[100dvh] flex-col gap-12 overflow-hidden overflow-y-auto border-r border-bgSecondary p-6 text-white lg:flex"
+        animate={{ width: isOpen ? 280 : 60 }}
+        className="hidden h-[100dvh] flex-col gap-8 overflow-hidden border-r border-bgSecondary text-white lg:flex"
       >
         <Header state={handleMenu} />
-        <Main />
-        <Divider />
-        <Secondary />
-        <Divider />
-        <Subscription state={isOpen} />
-        <Divider />
-        <Misc state={isOpen} />
+        <PerfectScrollbar className="flex w-full flex-col gap-10 p-6">
+          <Main />
+          <Divider />
+          <Secondary />
+          <Divider />
+          <Subscription state={isOpen} />
+          <Divider />
+          <Misc state={isOpen} />
+        </PerfectScrollbar>
       </motion.div>
     </>
   );

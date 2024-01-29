@@ -10,7 +10,7 @@ export default function Header({ state }) {
   };
 
   return (
-    <div className="flex flex-row items-center gap-8">
+    <div className="flex flex-row items-center gap-8 p-6">
       <Menu
         className="absolute cursor-pointer"
         onClick={handleMenu}

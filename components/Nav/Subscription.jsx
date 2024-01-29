@@ -16,7 +16,7 @@ export default function Subscription({ state }) {
       >
         SUBSCRIPTIONS
       </motion.div>
-      <List />
+      <List state={state} />
     </div>
   );
 }

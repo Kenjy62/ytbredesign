@@ -17,7 +17,9 @@ export default function Item({ user, id }) {
     >
       <Avatar id={id} h={18} w={18} style={"rounded-full"} />
       <span className="whitespace-nowrap text-sm">{user.name}</span>
-      {user.inLive && <Radio size={18} className="text-red-500" />}
+      {user.inLive && (
+        <Radio size={18} className="min-h-[18px] min-w-[18px] text-red-500" />
+      )}
       {user.newVideo && !user.inLive && (
         <div className="h-[6px] w-[6px] rounded-full bg-blue-400"></div>
       )}
