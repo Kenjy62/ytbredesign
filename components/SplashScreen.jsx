@@ -50,25 +50,25 @@ export default function SplashScreen() {
       <motion.div
         initial={{ height: "100%" }}
         animate={{ height: "0%" }}
-        transition={{ duration: 1, delay: 0.25 }}
+        transition={{ duration: 1, delay: 0.35 }}
         className="h-full w-[10%] bg-red-500"
       ></motion.div>
       <motion.div
         initial={{ height: "100%" }}
         animate={{ height: "0%" }}
-        transition={{ duration: 1, delay: 0.25 }}
+        transition={{ duration: 1, delay: 0.12 }}
         className="h-full w-[10%] bg-red-500"
       ></motion.div>
       <motion.div
         initial={{ height: "100%" }}
         animate={{ height: "0%" }}
-        transition={{ duration: 1, delay: 0.25 }}
+        transition={{ duration: 1, delay: 0.28 }}
         className="h-full w-[10%] bg-red-500"
       ></motion.div>
       <motion.div
         initial={{ height: "100%" }}
         animate={{ height: "0%" }}
-        transition={{ duration: 1, delay: 0.25 }}
+        transition={{ duration: 1, delay: 0.35 }}
         className="h-full w-[10%] bg-red-500"
       ></motion.div>
     </motion.div>
