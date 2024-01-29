@@ -8,7 +8,7 @@ export default function VideoPlayer() {
   return (
     <div className="group relative">
       <Image
-        src={"https:/picsum.photos/1280/1280"}
+        src={"/demo.jpg"}
         height={400}
         width={400}
         className="max-h-[350px] w-full object-cover md:max-h-[600px] md:rounded-xl"
