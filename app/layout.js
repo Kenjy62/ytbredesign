@@ -23,6 +23,7 @@ export default function RootLayout({ children }) {
       <body className={`flex flex-row ${inter.className}`}>
         <ProviderTree>
           <FullScreenNav />
+          <SplashScreen />
           <Nav />
           <div className="flex w-full flex-col">
             <Topbar />
