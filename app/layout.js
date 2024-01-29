@@ -22,7 +22,6 @@ export default function RootLayout({ children }) {
     <html className="overflow-hidden bg-bgPrimary" lang="en">
       <body className={`flex flex-row ${inter.className}`}>
         <ProviderTree>
-          <SplashScreen />
           <FullScreenNav />
           <Nav />
           <div className="flex w-full flex-col">
