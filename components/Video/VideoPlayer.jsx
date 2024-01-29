@@ -1,4 +1,4 @@
-// Require
+// Required
 import Image from "next/image";
 
 // Icons
