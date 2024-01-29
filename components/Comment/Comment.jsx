@@ -1,24 +1,29 @@
 // Components
-import Avatar from "../Avatar";
-import Like from "../Like";
+import Avatar from "../UI/Avatar";
+import Like from "../UI/Like";
 
-export default function Comment() {
+// Required
+import Link from "next/link";
+
+export default function Comment({ id, item }) {
   return (
-    <div className="flex flex-row gap-4">
+    <div className="flex flex-row gap-4 p-4 md:p-0">
       <div className="flex items-baseline justify-start">
-        <Avatar h={50} w={50} style={"rounded-xl"} />
+        <Avatar id={id} h={50} w={50} style={"rounded-xl"} />
       </div>
       <div className="flex flex-col gap-2">
         <div className="flex flex-row items-center gap-2">
-          <span className="font-semibold text-white">Charlotte White</span>
-          <span className="text-sm text-textSecondary">1 month ago</span>
+          <Link
+            href="#"
+            className="font-semibold text-white hover:text-red-500"
+          >
+            {item.name}
+          </Link>
+          <span className="text-sm text-textSecondary">{item.when}</span>
         </div>
-        <div className="text-sm text-white">
-          A very slow, gentle, beautiful shamanic tantra love music. Ideal as as
-          spiritual soundbath, yoga or deep tantric love experience music. With
-          deep, warm yet firm sound of the shaman drum.
-        </div>
-        <Like />
+
+        <span className="text-sm text-white">{item.message}</span>
+        <Like count={item.like} />
       </div>
     </div>
   );

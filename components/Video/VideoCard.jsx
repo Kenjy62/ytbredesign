@@ -1,17 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import Avatar from "../Avatar";
+import Avatar from "../UI/Avatar";
 
-export default function VideoCard() {
+export default function VideoCard({ item, id }) {
   return (
     <div className="flex flex-col gap-2 text-white">
       <Image
-        src={"https://picsum.photos/500/500"}
+        src={`https://picsum.photos/500/500?${id}`}
         height={250}
         width={500}
         className="h-[180px] w-[90%] rounded-lg"
       />
-      <span>A beautiful plant</span>
+      <span>{item.name}</span>
       <div className="flex flex-row items-center gap-4">
         <Link
           href={"#"}
@@ -19,9 +19,9 @@ export default function VideoCard() {
             "flex flex-row items-center gap-2 text-textSecondary hover:text-red-500"
           }
         >
-          <Avatar h={18} w={18} style={"rounded-full"} />
-          <span className="whitespace-nowrap  text-xs">Discovery Plant</span>
-          <span className="text-xs">2.6M</span>
+          <Avatar id={id} h={18} w={18} style={"rounded-full"} />
+          <span className="whitespace-nowrap text-xs">{item.author}</span>
+          <span className="text-xs">{item.views}</span>
         </Link>
       </div>
     </div>

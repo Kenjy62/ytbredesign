@@ -4,7 +4,7 @@
 import { motion } from "framer-motion";
 
 // Components
-import MenuItem from "../MenuItem";
+import MenuItem from "./Item/Item";
 
 // Icons
 import { Settings, MessageSquareShare } from "lucide-react";

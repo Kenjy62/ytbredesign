@@ -1,4 +1,4 @@
-export default function Author() {
+export default function TitleViews() {
   return (
     <div className="flex flex-col gap-2">
       <span>Relaxing Music from Stress Relief</span>

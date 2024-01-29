@@ -3,10 +3,13 @@ import { Mic } from "lucide-react";
 
 export default function Searchbar() {
   return (
-    <div className="flex flex-row items-center gap-4">
-      <Mic size={18} className="text-bgSecondary" />
+    <div className="flex w-fit flex-row items-center gap-4">
+      <Mic
+        size={18}
+        className="cursor-pointer text-bgSecondary hover:text-red-500"
+      />
       <input
-        className="bg-transparent text-sm text-bgSecondary placeholder:text-bgSecondary"
+        className="h-full w-fit bg-transparent text-sm text-white outline-none placeholder:text-bgSecondary"
         placeholder="Type to search"
       />
     </div>

@@ -4,14 +4,14 @@ import Image from "next/image";
 // Icons
 import { Play, Volume2, Maximize } from "lucide-react";
 
-export default function Player() {
+export default function VideoPlayer() {
   return (
     <div className="group relative">
       <Image
         src={"https:/picsum.photos/1280/1280"}
         height={400}
         width={400}
-        className="max-h-[600px] w-full rounded-xl object-cover"
+        className="max-h-[350px] w-full object-cover md:max-h-[600px] md:rounded-xl"
       />
       <div className="absolute bottom-0 left-0 hidden w-full flex-row items-center gap-4 bg-opacity-85 bg-gradient-to-t from-black to-transparent p-4 group-hover:flex">
         <Play

@@ -2,7 +2,7 @@
 import { Compass, Flame, DollarSign } from "lucide-react";
 
 // Components
-import MenuItem from "../MenuItem";
+import Item from "./Item/Item";
 
 export default function Main() {
   const mainLink = [
@@ -14,7 +14,7 @@ export default function Main() {
   return (
     <div className="flex flex-col gap-4">
       {mainLink.map((item, id) => (
-        <MenuItem key={id} name={item.name} icon={item.icon} />
+        <Item key={id} name={item.name} icon={item.icon} />
       ))}
     </div>
   );

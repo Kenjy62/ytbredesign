@@ -1,5 +1,5 @@
 // Components
-import MenuItem from "../MenuItem";
+import MenuItem from "./Item/Item";
 
 // Icons
 import { PlaySquare, History, Loader, Heart } from "lucide-react";

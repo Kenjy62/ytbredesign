@@ -1,35 +1,31 @@
 "use client";
 
 // Components
-import Divider from "@/components/Divider";
-import Player from "@/components/Video/Player";
+import Divider from "@/components/UI/Divider";
+import VideoPlayer from "@/components/Video/VideoPlayer";
 import Rightbar from "@/components/Rightbar";
-import Informations from "@/components/Video/Informations";
-import Author from "@/components/Video/Author";
-import Action from "@/components/Video/Action";
+import VideoDetails from "@/components/Video/VideoDetails";
+import Comments from "@/components/Comment/Comments";
 
 // Required
 import PerfectScrollbar from "react-perfect-scrollbar";
 
 // Style
 import "react-perfect-scrollbar/dist/css/styles.css";
-import List from "@/components/Comment/List";
+import VideoInformations from "@/components/Video/VideoInformations";
 
 export default function Home() {
   return (
-    <div className="flex flex-row gap-8 p-8">
-      <div className="flex h-[calc(100dvh-130px)] w-full flex-col gap-6 pb-6">
+    <div className="flex flex-col gap-8 md:flex-row md:p-8">
+      <div className="flex h-[calc(100dvh-75px)] w-full flex-col gap-6 pb-6 md:h-[calc(100dvh-130px)]">
         <PerfectScrollbar>
-          <div className="mr-6 flex flex-col gap-6">
-            <Player />
-            <div className="flex flex-row justify-between text-white">
-              <Author />
-              <Action />
-            </div>
+          <div className="flex flex-col gap-6 md:mr-6">
+            <VideoPlayer />
+            <VideoInformations />
             <Divider />
-            <Informations />
+            <VideoDetails />
             <Divider />
-            <List />
+            <Comments />
           </div>
         </PerfectScrollbar>
       </div>

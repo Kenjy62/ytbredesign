@@ -4,7 +4,7 @@
 import { motion } from "framer-motion";
 
 // Components
-import SubItem from "../SubItem";
+import List from "./Subscription/List";
 
 export default function Subscription({ state }) {
   return (
@@ -16,9 +16,7 @@ export default function Subscription({ state }) {
       >
         SUBSCRIPTIONS
       </motion.div>
-      <SubItem />
-      <SubItem />
-      <SubItem />
+      <List />
     </div>
   );
 }
